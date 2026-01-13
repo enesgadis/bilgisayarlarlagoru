@@ -98,3 +98,6 @@ Frontend uygulaması http://localhost:3000 adresinde çalışacaktır. Tarayıc�
 ## Kullanım
 
 Uygulama arayüzü üzerinden resim veya video dosyalarınızı yükleyerek analiz işlemlerini başlatabilirsiniz. Sol menüden kullanmak istediğiniz bilgisayarlı görü modülünü (Yüz Tespiti, El Takibi vb.) seçtikten sonra analiz sonuçları ekranınızda görüntülenecektir.
+
+Çıktı ve uygulama kullanımı için drive linkinden çıktılar dosyasındaki 3 videonun izlenmesi gerekmektedir.
+https://drive.google.com/drive/folders/15N9snpz3GYKRWSH8hj4zXBdiFpLWnaET?usp=sharing
