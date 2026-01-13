@@ -75,7 +75,6 @@ C:\yl\goruntuisleme\
 │   │   ├── components\ # React bileşenleri
 │   │   └── App.jsx
 │   └── package.json
-├── SUNUM.md            # Proje sunumu
 └── BASLAT.md           # Bu dosya
 ```
 
@@ -83,17 +82,18 @@ C:\yl\goruntuisleme\
 
 ## 🎯 Demo için Önerilen Akış
 
-1. **Proje Seçim Ekranı** - İki proje göster
-2. **Görüntü İşleme Lab**
+1. **Görüntü İşleme**
    - Bir resim yükle
-   - AI Super Resolution dene
-   - AI Style Transfer (Van Gogh) dene
-   - AI Background Blur dene
-3. **Bilgisayarla Görü Lab**
    - Yüz tespiti göster
    - El tespiti göster
    - Poz tahmini göster
-4. **Webcam** - Gerçek zamanlı demo
+
+2. **Video İşleme**
+   - Video yükle
+   - Gerçek zamanlı analiz
+
+3. **Webcam**
+   - Gerçek zamanlı demo
 
 ---
 
