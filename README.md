@@ -1,196 +1,100 @@
-# 🧠 AI Image Lab
+# AI Image Lab
+Yapay Zeka Destekli Bilgisayarlı Görü ve Video Analiz Uygulaması
 
-**Yapay Zeka Tabanlı Görüntü ve Video İşleme Uygulaması**
+Yazılım Mühendisliği Yüksek Lisans Projesi
 
-> Yazılım Mühendisliği Yüksek Lisans Projesi
+Bu proje, modern yapay zeka tekniklerini kullanarak gelişmiş bilgisayarlı görü (Computer Vision) uygulamaları sunan bir web platformudur. MediaPipe ve OpenCV kütüphanelerinin gücünü kullanarak, gerçek zamanlı nesne tespiti, yüz analizi ve hareket takibi gibi karmaşık görü problemlerini çözmektedir.
 
----
+## Özellikler
 
-## 📋 Proje Hakkında
+### Bilgisayarlı Görü Modülleri
+*   **Yüz Tespiti ve Analizi**: Gelişmiş derin öğrenme modelleri ile çoklu yüz algılama.
+*   **Yüz Mesh Ağı**: Yüz geometrisini 468 nokta ile detaylı modelleme.
+*   **El ve Jest Takibi**: 21 referans noktası üzerinden el hareketlerinin ve jestlerinin analizi.
+*   **Vücut Poz Kestirimi**: 33 vücut noktası ile iskelet tespiti ve postür analizi.
+*   **Nesne Takibi**: Videolarda nesne ve hareket takibi.
 
-AI Image Lab, modern yapay zeka ve bilgisayarlı görü teknolojilerini kullanarak görüntü ve video işleme işlevleri sunan kapsamlı bir web uygulamasıdır. MediaPipe ve OpenCV kütüphaneleri ile geliştirilmiş olan bu proje, gerçek zamanlı yüz tespiti, el takibi, vücut pozu analizi ve çeşitli görüntü işleme filtreleri sunmaktadır.
+### Video Analiz Yetenekleri
+*   **Gerçek Zamanlı İşleme**: Kamera veya video dosyaları üzerinde gecikmesiz analiz.
+*   **Hareket Analizi**: Sahne üzerindeki hareketli bölgelerin tespiti ve takibi.
 
-## ✨ Özellikler
+## Teknolojiler
 
-### Görüntü İşleme
-- **Yüz Tespiti**: MediaPipe Face Detection ile yüksek doğruluklu yüz algılama
-- **Yüz Mesh**: 468 noktalı detaylı yüz ağı çıkarma
-- **El Tespiti**: 21 el noktası ile el iskeleti çıkarma
-- **Vücut Pozu**: 33 vücut noktası ile poz tespiti
-- **Kenar Algılama**: Canny algoritması ile kenar tespiti
-- **Kontur Tespiti**: Nesne sınırlarını belirleme
-- **Renk Segmentasyonu**: HSV uzayında renk bazlı segmentasyon
-- **Artistik Filtreler**: Karikatür, kalem çizimi, kabartma efektleri
-- **Histogram Eşitleme**: CLAHE ile kontrast iyileştirme
+Proje, modern web mimarisi standartlarına uygun olarak geliştirilmiştir:
 
-### Video İşleme
-- **Gerçek Zamanlı Analiz**: Yüz, el ve poz tespiti
-- **Hareket Algılama**: Kare farkı ile hareket tespiti
-- **Video Dönüştürme**: Çeşitli filtrelerle video işleme
+### Backend (Sunucu Tarafı)
+*   **Python**: Ana programlama dili.
+*   **FastAPI**: Yüksek performanslı asenkron web çatısı.
+*   **OpenCV & MediaPipe**: Bilgisayarlı görü ve makine öğrenmesi kütüphaneleri.
 
-### Ek Özellikler
-- **Görüntü Analizi**: Boyut, renk dağılımı, parlaklık analizi
-- **Görüntü Karşılaştırma**: İki görüntü arasındaki farkları tespit
-- **Toplu İşleme**: Birden fazla görüntüyü aynı anda işleme
+### Frontend (İstemci Tarafı)
+*   **React**: Kullanıcı arayüzü kütüphanesi.
+*   **Vite**: Modern ve hızlı derleme aracı.
 
-## 🛠️ Teknolojiler
+## Kurulum ve Çalıştırma
 
-### Backend
-- **FastAPI**: Modern, yüksek performanslı Python web framework
-- **OpenCV**: Bilgisayarlı görü kütüphanesi
-- **MediaPipe**: Google'ın makine öğrenmesi çözümleri
-- **NumPy**: Sayısal hesaplama kütüphanesi
+Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları takip edebilirsiniz.
 
-### Frontend
-- **React 18**: Modern UI kütüphanesi
-- **Vite**: Hızlı geliştirme aracı
-- **Framer Motion**: Animasyon kütüphanesi
-- **React Dropzone**: Dosya yükleme bileşeni
+### Ön Gereksinimler
+*   Python 3.9 veya üzeri
+*   Node.js 18 veya üzeri
 
-## 📁 Proje Yapısı
+### 1. Backend Kurulumu
 
-```
-ai-image-lab/
-├── backend/
-│   ├── main.py              # FastAPI ana uygulama
-│   ├── ai_core.py           # AI görüntü işleme fonksiyonları
-│   ├── video_processor.py   # Video işleme modülü
-│   └── requirements.txt     # Python bağımlılıkları
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/      # React bileşenleri
-│   │   ├── App.jsx          # Ana uygulama
-│   │   └── index.css        # Global stiller
-│   ├── package.json         # Node bağımlılıkları
-│   └── vite.config.js       # Vite yapılandırması
-│
-└── README.md
-```
-
-## 🚀 Kurulum
-
-### Gereksinimler
-- Python 3.9+
-- Node.js 18+
-- pip
-- npm
-
-### Backend Kurulumu
+Terminali açın ve backend klasörüne gidin:
 
 ```bash
-# Backend klasörüne git
 cd backend
+```
 
-# Sanal ortam oluştur (önerilir)
+Sanal ortam oluşturun ve aktif edin:
+
+```bash
+# Windows için
 python -m venv venv
-
-# Sanal ortamı aktive et
-# Windows:
 venv\Scripts\activate
-# Linux/Mac:
-source venv/bin/activate
 
-# Bağımlılıkları yükle
+# Mac/Linux için
+# python3 -m venv venv
+# source venv/bin/activate
+```
+
+Gerekli Python paketlerini yükleyin:
+
+```bash
 pip install -r requirements.txt
+```
 
-# Sunucuyu başlat
+Sunucuyu başlatın:
+
+```bash
 python main.py
 ```
 
-Backend http://localhost:8000 adresinde çalışacaktır.
+Backend servisi http://localhost:8000 adresinde çalışmaya başlayacaktır.
 
-### Frontend Kurulumu
+### 2. Frontend Kurulumu
+
+Yeni bir terminal penceresi açın ve frontend klasörüne gidin:
 
 ```bash
-# Frontend klasörüne git
 cd frontend
+```
 
-# Bağımlılıkları yükle
+Gerekli Node.js paketlerini yükleyin:
+
+```bash
 npm install
+```
 
-# Geliştirme sunucusunu başlat
+Uygulamayı başlatın:
+
+```bash
 npm run dev
 ```
 
-Frontend http://localhost:3000 adresinde çalışacaktır.
+Frontend uygulaması http://localhost:3000 adresinde çalışacaktır. Tarayıcınızda bu adresi açarak uygulamayı kullanmaya başlayabilirsiniz.
 
-## 📖 API Dokümantasyonu
+## Kullanım
 
-Backend çalışırken, API dokümantasyonuna şu adreslerden erişebilirsiniz:
-
-- **Swagger UI**: http://localhost:8000/docs
-- **ReDoc**: http://localhost:8000/redoc
-
-### Temel Endpoint'ler
-
-| Endpoint | Metod | Açıklama |
-|----------|-------|----------|
-| `/` | GET | API durum kontrolü |
-| `/modes` | GET | Desteklenen işleme modları |
-| `/process-image/` | POST | Görüntü işleme |
-| `/process-video/` | POST | Video işleme |
-| `/analyze-image/` | POST | Görüntü analizi |
-| `/video-info/` | POST | Video bilgisi |
-| `/analyze-motion/` | POST | Hareket analizi |
-| `/compare/` | POST | Görüntü karşılaştırma |
-
-## 🎯 Kullanım
-
-1. Tarayıcınızda http://localhost:3000 adresine gidin
-2. "Görüntü İşleme" veya "Video İşleme" sekmesini seçin
-3. Bir dosya yükleyin
-4. İstediğiniz işleme modunu seçin
-5. "İşlemeyi Başlat" butonuna tıklayın
-6. Sonucu görüntüleyin ve indirin
-
-## 🔧 İşleme Modları
-
-### Görüntü Modları
-| Mod | Açıklama |
-|-----|----------|
-| `blur` | Gaussian bulanıklaştırma |
-| `edges` | Canny kenar algılama |
-| `detection` | Yüz tespiti |
-| `face_mesh` | 468 noktalı yüz mesh |
-| `hands` | El tespiti |
-| `pose` | Vücut pozu tespiti |
-| `contours` | Nesne konturları |
-| `color_red/green/blue` | Renk segmentasyonu |
-| `cartoon` | Karikatür efekti |
-| `sketch` | Kalem çizimi |
-| `emboss` | Kabartma efekti |
-| `histogram` | Histogram eşitleme |
-
-### Video Modları
-| Mod | Açıklama |
-|-----|----------|
-| `motion` | Hareket algılama |
-| Diğerleri | Görüntü modlarının video versiyonları |
-
-## 📊 Teknik Detaylar
-
-### Yüz Tespiti Algoritması
-MediaPipe Face Detection, BlazeFace modelini kullanır. Bu model, tek bir görüntüde birden fazla yüzü algılayabilir ve her yüz için güven skoru döndürür.
-
-### El Tespiti
-MediaPipe Hands, her el için 21 anahtar nokta tespit eder. Bu noktalar, el hareketlerini ve jestlerini analiz etmek için kullanılabilir.
-
-### Poz Tespiti
-MediaPipe Pose, 33 vücut noktası tespit eder ve isteğe bağlı olarak arka plan segmentasyonu yapabilir.
-
-### Hareket Algılama
-İki ardışık kare arasındaki farkı hesaplayarak hareket eden bölgeleri tespit eder. Morfolojik işlemler ile gürültü filtrelenir.
-
-## 📝 Lisans
-
-Bu proje eğitim amaçlı geliştirilmiştir.
-
-## 👤 Geliştirici
-
-Yazılım Mühendisliği Yüksek Lisans Öğrencisi
-
----
-
-**Not**: Bu proje, yapay zeka ve bilgisayarlı görü teknolojilerinin pratik uygulamalarını göstermek amacıyla hazırlanmıştır.
-
+Uygulama arayüzü üzerinden resim veya video dosyalarınızı yükleyerek analiz işlemlerini başlatabilirsiniz. Sol menüden kullanmak istediğiniz bilgisayarlı görü modülünü (Yüz Tespiti, El Takibi vb.) seçtikten sonra analiz sonuçları ekranınızda görüntülenecektir.
