@@ -1,5 +1,4 @@
-# AI Image Lab
-Yapay Zeka Destekli Bilgisayarlı Görü ve Video Analiz Uygulaması
+# BİLGİSAYARLI GÖRÜ TEKNİKLERİ KULLANILARAK GELİŞTİRİLEN WEB TABANLI YAPAY ZEKA UYGULAMASI
 
 Yazılım Mühendisliği Yüksek Lisans Projesi
 
