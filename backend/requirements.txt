@@ -1,0 +1,20 @@
+# AI Image Lab - Backend Dependencies
+# Yazılım Mühendisliği Yüksek Lisans Projesi
+
+# Web Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+
+# Görüntü İşleme
+opencv-python==4.9.0.80
+opencv-contrib-python==4.9.0.80
+numpy==1.26.3
+Pillow==10.2.0
+
+# Yapay Zeka / Makine Öğrenmesi
+mediapipe==0.10.21
+
+# Yardımcı
+python-dotenv==1.0.0
+

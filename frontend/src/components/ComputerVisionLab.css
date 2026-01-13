@@ -1,0 +1,339 @@
+.computer-vision-lab {
+  padding: 1.5rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* CV Header - Farklı gradient */
+.cv-header .lab-title-section h1 {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cv-tabs .tab-btn.active {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* Category Grid */
+.cv-category .category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.8rem 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.category-card:hover {
+  background: rgba(240, 147, 251, 0.1);
+  border-color: rgba(240, 147, 251, 0.3);
+}
+
+.category-card.active {
+  background: linear-gradient(135deg, rgba(240, 147, 251, 0.2) 0%, rgba(245, 87, 108, 0.2) 100%);
+  border-color: rgba(240, 147, 251, 0.5);
+}
+
+.category-card .cat-icon {
+  font-size: 1.5rem;
+}
+
+.category-card .cat-name {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+}
+
+/* CV Modes */
+.cv-modes .mode-item.active {
+  background: linear-gradient(135deg, rgba(240, 147, 251, 0.2) 0%, rgba(245, 87, 108, 0.2) 100%);
+  border-color: rgba(240, 147, 251, 0.4);
+}
+
+.cv-modes .mode-item:hover {
+  background: rgba(240, 147, 251, 0.1);
+  border-color: rgba(240, 147, 251, 0.2);
+}
+
+.cv-modes .check-mark {
+  color: #f093fb;
+}
+
+/* CV Process Button */
+.cv-process {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 4px 20px rgba(240, 147, 251, 0.3);
+}
+
+.cv-process:hover:not(:disabled) {
+  box-shadow: 0 8px 30px rgba(240, 147, 251, 0.5);
+}
+
+/* Webcam Info */
+.webcam-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(240, 147, 251, 0.1) 0%, rgba(245, 87, 108, 0.1) 100%);
+  border: 1px solid rgba(240, 147, 251, 0.3);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.webcam-info .webcam-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.webcam-info p {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.webcam-info .webcam-hint {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+}
+
+/* Detection Results */
+.detection-results {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+}
+
+.detection-results h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.results-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+}
+
+.result-label {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.result-confidence {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Reuse styles from ImageProcessingLab */
+.computer-vision-lab .lab-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.computer-vision-lab .lab-title-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.computer-vision-lab .lab-icon {
+  font-size: 3rem;
+}
+
+.computer-vision-lab .lab-title-section p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+}
+
+.computer-vision-lab .tab-switcher {
+  display: flex;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.4rem;
+  border-radius: 12px;
+}
+
+.computer-vision-lab .tab-btn {
+  padding: 0.7rem 1.5rem;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  transition: all 0.3s;
+}
+
+.computer-vision-lab .tab-btn:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.computer-vision-lab .lab-content {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 1100px) {
+  .computer-vision-lab .lab-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .cv-category .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.computer-vision-lab .control-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.computer-vision-lab .category-selector h3,
+.computer-vision-lab .mode-selector-compact h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.8rem;
+}
+
+.computer-vision-lab .mode-selector-compact {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 1.2rem;
+}
+
+.computer-vision-lab .modes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.computer-vision-lab .mode-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: left;
+}
+
+.computer-vision-lab .mode-item .mode-icon {
+  font-size: 1.3rem;
+}
+
+.computer-vision-lab .mode-item .mode-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.computer-vision-lab .mode-item .mode-label {
+  font-size: 0.9rem;
+  color: white;
+  font-weight: 500;
+}
+
+.computer-vision-lab .mode-item .mode-desc {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.computer-vision-lab .process-btn-large {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  transition: all 0.3s;
+}
+
+.computer-vision-lab .process-btn-large:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.computer-vision-lab .process-btn-large .spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.computer-vision-lab .reset-btn {
+  width: 100%;
+  padding: 0.8rem;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.computer-vision-lab .reset-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.computer-vision-lab .result-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
